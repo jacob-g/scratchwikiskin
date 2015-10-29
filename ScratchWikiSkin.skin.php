@@ -1,19 +1,4 @@
 <?php
-/**
- * Scratch skin
- *
- * @file
- * @ingroup Skins
- */
-
-if( !defined( 'MEDIAWIKI' ) ) {
-	die( 1 );
-}
-
-$wgValidSkinNames['scratchwikiskin'] = 'ScratchWikiSkin';
-
-#require_once( dirname( dirname( __FILE__ ) ) . '/includes/SkinTemplate.php');
-
 class SkinScratchWikiSkin extends SkinTemplate{
 	var $useHeadElement = true;
 
@@ -31,9 +16,9 @@ class SkinScratchWikiSkin extends SkinTemplate{
 	function setupSkinUserCss(OutputPage $out) {
 		global $wgLocalStylePath;
 		parent::setupSkinUserCss($out);
-		$out->addStyle('ScratchWikiSkin/main.css', 'screen');
+		$out->addStyle('scratchwikiskin/main.css', 'screen');
 		
-		$out->addHeadItem('skinscript', "<script type='text/javascript' src='$wgLocalStylePath/ScratchWikiSkin/skin.js'></script>");
+		$out->addHeadItem('skinscript', "<script type='text/javascript' src='$wgLocalStylePath/scratchwikiskin/skin.js'></script>");
 	}
 }
 
